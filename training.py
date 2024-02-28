@@ -48,7 +48,7 @@ def train_model(dataset, config, val_dataset, test_dataset):
     # Model setup
     model = models.resnet18()  # Ensure the correct argument for pretrained if needed
     num_ftrs = model.fc.in_features
-    model.fc = nn.Linear(num_ftrs, 6)  # Assuming 6 classes
+    model.fc = nn.Linear(num_ftrs, 2)  # Assuming 6 classes
     model = model.to(device)
 
     criterion = nn.CrossEntropyLoss()
@@ -91,15 +91,19 @@ if __name__ == "__main__":
     # Adjust paths and parameters as necessary
     dataset = SeeingThroughFogImageDataset('train', label_file=r'C:\Users\venkatesh\Desktop\Personal '
                                                                r'Projects\weather_recognition\resources'
-                                                               r'\dense_weather_labels.json'
-                                           )
+                                                               r'\dense_weather_labels.json', normalize=True,
+                                           transforms=transforms.Compose(
+                                               [transforms.Resize((224, 224)), transforms.ToTensor()]))
     val_dataset = SeeingThroughFogImageDataset('val', label_file=r'C:\Users\venkatesh\Desktop\Personal '
                                                                  r'Projects\weather_recognition\resources'
-                                                                 r'\dense_weather_labels.json')
+                                                                 r'\dense_weather_labels.json', normalize=True,
+                                               transforms=transforms.Compose(
+                                                   [transforms.Resize((224, 224)), transforms.ToTensor()]))
     test_dataset = SeeingThroughFogImageDataset('test', label_file=r'C:\Users\venkatesh\Desktop\Personal '
                                                                    r'Projects\weather_recognition\resources'
-                                                                   r'\dense_weather_labels.json')
-    # transforms=transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor()])
+                                                                   r'\dense_weather_labels.json', normalize=True,
+                                                transforms=transforms.Compose(
+                                                    [transforms.Resize((224, 224)), transforms.ToTensor()]))
 
     # Apply label transformation
     for ds in [dataset, val_dataset, test_dataset]:

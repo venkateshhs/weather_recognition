@@ -17,14 +17,15 @@ def get_timestamp(date_str: str):
 
 
 def label_to_int(label):
-    label_map = {'dense_fog': 0, 'clear': 1, 'snow': 2, 'light_fog': 3, 'rain': 4, 'unclear': 5}
+    # {'dense_fog': 2, 'clear': 0, 'snow': 1, 'light_fog': 3, 'rain': 4, 'unclear': 5}
+    label_map = {'clear': 0, 'snow': 1}
     return label_map.get(label, -1)
 
 
 def get_base_path(split: T.Union[str, T.Iterable[str]], base_path: T.Optional[str] = "",
                   assume_existing_files_only=False):
     dataset_files_config = r'C:\Users\venkatesh\Desktop\Personal ' \
-                           r'Projects\weather_recognition\resources\dense_images_split.yaml'
+                           r'Projects\weather_recognition\resources\filtered_labels_split.yaml'
     with open(dataset_files_config) as fo:
         dfs = yaml.safe_load(fo)
     directory_paths, file_paths = [], []
