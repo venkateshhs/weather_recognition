@@ -5,8 +5,8 @@ import pandas as pd
 from pathlib import Path
 
 # Replace these paths with the actual paths to your files
-split_file_path = r'C:\Users\venkatesh\Desktop\Personal Projects\weather_recognition\resources\filtered_labels_split.yaml'
-label_file_path = r'C:\Users\venkatesh\Desktop\Personal Projects\weather_recognition\resources\dense_weather_labels_snow.json'
+split_file_path = r'C:\Users\venkatesh\Desktop\Personal Projects\weather_recognition\resources\dense_images_split.yaml'
+label_file_path = r'C:\Users\venkatesh\Desktop\Personal Projects\weather_recognition\resources\dense_weather_labels.json'
 output_dir = Path(r'C:\Users\venkatesh\Desktop\Personal Projects\weather_recognition\resources')
 
 # Load dataset splits

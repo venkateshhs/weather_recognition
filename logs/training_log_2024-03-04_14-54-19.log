@@ -1,1 +1,26 @@
 2024-03-04 14:54:24,512:INFO:Starting training with learning rate 0.001, batch size: 32 and 10 epochs
+2024-03-04 15:05:19,357:INFO:Epoch 1/10, Loss: 0.46445546951969113
+2024-03-04 15:14:22,041:INFO:Epoch 2/10, Loss: 0.36997813342419344
+2024-03-04 15:23:19,861:INFO:Epoch 3/10, Loss: 0.36717567915937543
+2024-03-04 15:33:46,859:INFO:Epoch 4/10, Loss: 0.3560055231889792
+2024-03-04 15:42:57,317:INFO:Epoch 5/10, Loss: 0.33793423858891547
+2024-03-04 15:52:17,657:INFO:Epoch 6/10, Loss: 0.31511837613266125
+2024-03-04 16:01:16,280:INFO:Epoch 7/10, Loss: 0.3081929206980013
+2024-03-04 16:10:17,504:INFO:Epoch 8/10, Loss: 0.2831321501098903
+2024-03-04 16:19:18,677:INFO:Epoch 9/10, Loss: 0.2556011560743889
+2024-03-04 16:28:59,916:INFO:Epoch 10/10, Loss: 0.25412010375113614
+2024-03-04 16:28:59,917:INFO:Evaluating training set
+2024-03-04 16:34:28,303:INFO:Accuracy: 0.8694, Precision: 0.8637, Recall: 0.8852, F1 Score: 0.8664
+2024-03-04 16:34:28,304:INFO:training set confusion metrix [[1301   68    0]
+ [ 404 1841    0]
+ [   0    0    0]]
+2024-03-04 16:34:28,304:INFO:Evaluating on Validation Set
+2024-03-04 16:39:54,158:INFO:Accuracy: 0.6326, Precision: 0.6075, Recall: 0.6137, F1 Score: 0.6087
+2024-03-04 16:39:54,158:INFO:Validation set confusion metrix [[ 686  559    0]
+ [ 749 1566    0]
+ [   0    0    0]]
+2024-03-04 16:39:54,158:INFO:Evaluating on test Set
+2024-03-04 16:45:44,605:INFO:Accuracy: 0.7324, Precision: 0.5271, Recall: 0.6369, F1 Score: 0.4904
+2024-03-04 16:45:44,606:INFO:Validation set confusion metrix [[2659  930    0]
+ [  71   81    0]
+ [   0    0    0]]
