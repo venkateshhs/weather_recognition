@@ -18,7 +18,7 @@ def get_timestamp(date_str: str):
 
 def label_to_int(label):
     # {'dense_fog': 2, 'clear': 0, 'snow': 1, 'light_fog': 3, 'rain': 4, 'unclear': 5}
-    label_map = {'clear': 0, 'snow': 1}
+    label_map = {'clear': 0, 'snow': 1, 'unclear': 2}
     return label_map.get(label, -1)
 
 

@@ -73,7 +73,9 @@ class SeeingThroughFogImageDataset:
 
             # Extract filename without extension to match labels
             filename = img_path.name.split('.')[0]
-            label = self.labels.get(filename, "unknown")  # Default label if not found
+            label = self.labels.get(filename, -1)  # Default label if not found
+            if label == -1:
+                print('Label is -1', filename)
             return img_tensor, label
 
         except Exception as e:
